@@ -28,6 +28,8 @@
 - Вызывает функццию агента ask() которая обращается к LLM инструментам
 - Возвращает результат в формате JSON
 
+pip install langchain==0.2.16 langchain-groq==0.1.9 langchain-community==0.2.17 python-dotenv fastapi uvicorn
+
 ## Ообработка неккоректных запросов
 <img width="1842" height="1017" alt="subaru" src="https://github.com/user-attachments/assets/c4b3a46a-8d04-4c18-9c21-deca73f44272" />
 
