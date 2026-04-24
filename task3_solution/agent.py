@@ -40,7 +40,7 @@ SYSTEM_PROMPT = """Ты — профессиональный фитнес-тре
 llm = ChatGroq(
     model="llama-3.1-8b-instant",
     temperature=0,
-    api_key=os.getenv("GROQ_API_KEY"),
+    api_key=os.getenv("GROQ_API_KEY"),      # переменное окружение
 )
 
 tools = [calculate_bmi, calculate_calories]
