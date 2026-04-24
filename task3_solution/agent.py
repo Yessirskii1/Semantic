@@ -12,7 +12,6 @@ load_dotenv()
 
 @tool
 def calculate_bmi(weight_kg: float, height_cm: float) -> str:
-    """Рассчитывает ИМТ по весу (кг) и росту (см)."""
     h = height_cm / 100
     bmi = round(weight_kg / (h ** 2), 1)
     if bmi < 18.5: cat = "недостаточный вес"
@@ -24,7 +23,6 @@ def calculate_bmi(weight_kg: float, height_cm: float) -> str:
 
 @tool
 def calculate_calories(weight_kg: float, height_cm: float, age: int, gender: str, activity: str) -> str:
-    """Считает норму калорий. gender: мужской/женский. activity: низкая/средняя/высокая."""
     bmr = 10 * weight_kg + 6.25 * height_cm - 5 * age + (5 if gender.lower() == "мужской" else -161)
     factors = {"низкая": 1.2, "средняя": 1.55, "высокая": 1.725}
     return f"Норма калорий: ~{int(bmr * factors.get(activity.lower(), 1.2))} ккал/день"
@@ -66,7 +64,7 @@ def ask(question: str) -> str:
 
 
 if __name__ == "__main__":
-    print("🏋️ Тестируем фитнес-тренера...\n")
+    print("Тест\n")
     print(ask("Рассчитай ИМТ для веса 75 кг и роста 180 см"))
     print()
     print(ask("Калории для мужчины 30 лет, 80 кг, 175 см, средняя активность"))
