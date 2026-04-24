@@ -2,7 +2,7 @@
 
 ## Стек
 - Langchain
-- Langchaim-groq
+- Langchaim-groq (llama-3.1-8b-instant)
 - Fastapi + Uvicorn
 
 
